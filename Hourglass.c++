@@ -1,0 +1,1 @@
+#include<stdio.h> int main() struct num { int i,j e k,l; struct num n=\ 1,2,3\ printf("%d %d 96d 96d". n.i,n.|,n.k,n.l);}

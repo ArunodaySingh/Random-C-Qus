@@ -2,16 +2,16 @@
 using namespace std;
 int main()
 {
-    int n, s, k, p, q;
+    int n, s, p, q, e;
+    bool a;
     cin >> n;
-    k = n;
-    q = k;
-    s = n - 1;
-    p = s;
+    q = e = n;
+    p = s = n - 1;
 label:
-    while (n > 0)
+    while (n > 0 && e > 0)
     {
-        if (s > 0)
+        (s > 0) ? a = false : a = true;
+        if (a == false)
         {
             cout << " ";
             --s;
@@ -20,16 +20,16 @@ label:
         {
             cout << "*";
         }
-
         --n;
-    }
-    cout << endl;
-    n = k;
-    s = --p;
-    if (q > 1)
-    {
-        --q;
-        goto label;
+        if (q == (n + q) && e>0)
+        {
+            cout << endl;
+            n = q;
+            s = --p;
+            --e;
+            goto label;
+        }
+
     }
     return 0;
 }

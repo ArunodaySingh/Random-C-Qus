@@ -1,41 +1,35 @@
-// * Find the root of the quadratic equation
+// * count the character 
 
-#include<iostream>
-#include<math.h>
+#include <iostream>
+#include <fstream>
 using namespace std;
-
-class overload_opearator
-{
-   int num1;
-   int num2;
-   int store;
-   public:
-   overload_opearator(int a,int b)
-   {
-      num1=a;
-      num2=b;
-   }
-   void operator+()
-   {
-      store=num1*num2;
-   }
-   void operator*()
-   {
-      store=num1+num2;
-   }
-   void output()
-   {
-      cout<<store<<endl;
-   }
-
-};
-
 int main()
 {
- overload_opearator obj(4,5);
- +obj;
- obj.output();
- *obj;
- obj.output();  
- return 0;
+ofstream fout;
+char ch;
+string line;
+int count=0,store;
+fout.open("file1.txt");
+while(fout)
+{
+  getline(cin,line);
+  if(line=="-1")
+  {
+   break;
+  }
+  fout<<line;
+}
+fout.close();
+ifstream fin;
+fin.open("file1.txt");
+while(fin)
+{
+   fin.get(ch);
+   store=ch;
+   if ((store > 63 && store < 91) || (store > 96 && store <123))
+   {
+      count++;
+   }
+}
+cout<<count-1;
 }

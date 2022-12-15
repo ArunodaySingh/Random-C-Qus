@@ -19,8 +19,8 @@ break;
 fout << line << endl;
 }
 // Close the File
-fout.close();
- ifstream inf{ "sample.txt" };
+ fout.close();
+ ifstream inf{ "sample.txt" }; //constructor method use here;
  // If we couldn't open the input file stream for reading
  if (!inf)
  {

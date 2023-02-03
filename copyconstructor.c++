@@ -37,7 +37,7 @@ public:
   int getHeight () { return h; }
 
   long long CalculateVolume () {
-    return 1ll * l * b * h;
+    return  * l * b * h;
   }
 
   bool operator < (const Box& other) {
